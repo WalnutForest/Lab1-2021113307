@@ -1,7 +1,11 @@
 Software engineering is the application of engineering to the development of software in a systematic method.
 Software engineering is a direct sub-field of engineering and has an overlap with computer science and management science.
 <<<<<<< HEAD
+<<<<<<< HEAD
 It is also considered a part of overall systems engineering.this is text in B1
 =======
-It is also considered a part of overall systems engineering.this is txt in B1
+It is also considered a part of overall systems engineering.this is txt in 2021113307
 >>>>>>> C4
+=======
+It is also considered a part of overall systems engineering.this is txt in 2021113307
+>>>>>>> B2
