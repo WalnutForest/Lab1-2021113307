@@ -1,0 +1,17 @@
+// Directed Graph
+digraph {
+	text -> i [label=1]
+	i -> am [label=4 color=red]
+	am -> a [label=1 color=red]
+	a -> student [label=1]
+	student -> i [label=1]
+	am -> studying [label=1]
+	studying -> in [label=1]
+	in -> the [label=1]
+	the -> school [label=1]
+	school -> i [label=1]
+	am -> learning [label=1]
+	learning -> python [label=1]
+	python -> i [label=1]
+	am -> happy [label=1]
+}

@@ -1,0 +1,1 @@
+text = 'I am a student. I am studying in the school. I am learning Python. I am happy.'
