@@ -1,0 +1,3 @@
+text = 'I am a student. I am studying in the school. I am learning Python. I am happy.
+I am studying Python I am using Python.'I am studying Python in the school. I am learning Python in the school.
+I am happy in the school. I am using Python in the school.'
