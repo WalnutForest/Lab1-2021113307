@@ -107,31 +107,25 @@ class My_Graph:
         return path, distence, path_list
 
     def calcShortestPath(self, word1: string, word2: string) -> string :
-        #检查word1和word2是否在self.words中
         if word1 not in self.words or word2 not in self.words:
             return "No such word"
-        #使用calcShortestPathsToAllWords的结果计算word1到word2的最短路径
         path, distance, path_list = self.calcShortestPathsToAllWords(word1)
         tmp_words = self.words
-        # 对self.words进行去重，保持顺序不变
         self.words = []
         for i in range(len(tmp_words)):
             if tmp_words[i] not in self.words:
                 self.words.append(tmp_words[i])
         path_word1_2_word2 = path_list[self.words.index(word2)]
-        #将path_word1_2_word2转换为很多个edge
         tmp_path_word1_2_word2_edge = []
         dot = Digraph(comment='Directed Graph')
         for i in range(len(path_word1_2_word2) - 1):
             tmp_path_word1_2_word2_edge.append(My_Edge.My_Edge(path_word1_2_word2[i], path_word1_2_word2[i + 1], 1))
         for i in range(len(self.graph)):
             if self.graph[i] in tmp_path_word1_2_word2_edge:
-                #点和边的颜色都为红色
                 dot.edge(self.graph[i].node1, self.graph[i].node2, label=str(self.graph[i].weight), color='red')
             else:
                 dot.edge(self.graph[i].node1, self.graph[i].node2, label=str(self.graph[i].weight))
         dot.render('test-output/round-table.gv', view=True, format='png')
-        #在path_word1_2_word2最后加上距离
         path_word1_2_word2.append(str(distance[self.words.index(word1)][self.words.index(word2)]))
         self.words = tmp_words
         return path_word1_2_word2
